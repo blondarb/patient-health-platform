@@ -1,0 +1,2217 @@
+{
+  "resourceType": "Bundle",
+  "id": "emily-ramirez-bundle",
+  "type": "collection",
+  "timestamp": "2026-03-04T00:00:00Z",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:patient-emily-ramirez",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "emily-ramirez",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.4.3.30",
+            "value": "MT-20240003"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Ramirez",
+            "given": ["Emily", "Sofia"]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "406-555-0319",
+            "use": "mobile"
+          },
+          {
+            "system": "email",
+            "value": "emily.ramirez@email.com",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1990-06-22",
+        "address": [
+          {
+            "use": "home",
+            "line": ["1520 Central Ave W, Apt 4B"],
+            "city": "Great Falls",
+            "state": "MT",
+            "postalCode": "59404",
+            "country": "US"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "S",
+              "display": "Never Married"
+            }
+          ]
+        },
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en",
+                  "display": "English"
+                }
+              ]
+            },
+            "preferred": true
+          },
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "es",
+                  "display": "Spanish"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:patient-luna-ramirez",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "luna-ramirez",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.4.3.30",
+            "value": "MT-20240004"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Ramirez",
+            "given": ["Luna", "Maria"]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "406-555-0319",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "2018-12-03",
+        "address": [
+          {
+            "use": "home",
+            "line": ["1520 Central Ave W, Apt 4B"],
+            "city": "Great Falls",
+            "state": "MT",
+            "postalCode": "59404",
+            "country": "US"
+          }
+        ],
+        "contact": [
+          {
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                    "code": "N",
+                    "display": "Next-of-Kin"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "family": "Ramirez",
+              "given": ["Emily"]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "406-555-0319",
+                "use": "mobile"
+              }
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en",
+                  "display": "English"
+                }
+              ]
+            },
+            "preferred": true
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:practitioner-jennifer-liu",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "practitioner-jennifer-liu",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "7890123456"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Liu",
+            "given": ["Jennifer"],
+            "prefix": ["Dr."]
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0360",
+                  "code": "MD",
+                  "display": "Doctor of Medicine"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:practitioner-thomas-wright",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "practitioner-thomas-wright",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "8901234567"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Wright",
+            "given": ["Thomas"],
+            "prefix": ["Dr."]
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0360",
+                  "code": "MD",
+                  "display": "Doctor of Medicine"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:organization-great-falls-family",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-great-falls-family",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "active": true,
+        "name": "Great Falls Family Practice",
+        "address": [
+          {
+            "line": ["305 2nd Ave N"],
+            "city": "Great Falls",
+            "state": "MT",
+            "postalCode": "59401"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:organization-great-falls-pediatrics",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-great-falls-pediatrics",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "active": true,
+        "name": "Great Falls Pediatric Associates",
+        "address": [
+          {
+            "line": ["710 3rd Ave N, Suite 200"],
+            "city": "Great Falls",
+            "state": "MT",
+            "postalCode": "59401"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:organization-benefis-urgent-care",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-benefis-urgent-care",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "active": true,
+        "name": "Benefis Health System Urgent Care",
+        "address": [
+          {
+            "line": ["1101 26th St S"],
+            "city": "Great Falls",
+            "state": "MT",
+            "postalCode": "59405"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:related-person-emily-for-luna",
+      "resource": {
+        "resourceType": "RelatedPerson",
+        "id": "related-emily-for-luna",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "active": true,
+        "patient": {
+          "reference": "Patient/luna-ramirez",
+          "display": "Luna Ramirez"
+        },
+        "relationship": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                "code": "MTH",
+                "display": "mother"
+              }
+            ]
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Ramirez",
+            "given": ["Emily"]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "406-555-0319",
+            "use": "mobile"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-migraine",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-migraine-er",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "G43.909",
+              "display": "Migraine, unspecified, not intractable, without status migrainosus"
+            }
+          ],
+          "text": "Migraine"
+        },
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "onsetDateTime": "2016-08-10",
+        "recorder": {
+          "reference": "Practitioner/practitioner-jennifer-liu",
+          "display": "Dr. Jennifer Liu"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-allergies",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-seasonal-allergies-er",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "J30.2",
+              "display": "Other seasonal allergic rhinitis"
+            }
+          ],
+          "text": "Seasonal allergies"
+        },
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "onsetDateTime": "2012-05-01",
+        "recorder": {
+          "reference": "Practitioner/practitioner-jennifer-liu",
+          "display": "Dr. Jennifer Liu"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-asthma-luna",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-asthma-luna",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "J45.20",
+              "display": "Mild intermittent asthma, uncomplicated"
+            }
+          ],
+          "text": "Asthma, mild intermittent"
+        },
+        "subject": {
+          "reference": "Patient/luna-ramirez",
+          "display": "Luna Ramirez"
+        },
+        "onsetDateTime": "2022-11-15",
+        "recorder": {
+          "reference": "Practitioner/practitioner-thomas-wright",
+          "display": "Dr. Thomas Wright"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:allergy-penicillin-luna",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "allergy-penicillin-luna",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": ["medication"],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "7980",
+              "display": "Penicillin"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "91936005",
+              "display": "Allergy to penicillin"
+            }
+          ],
+          "text": "Penicillin allergy"
+        },
+        "patient": {
+          "reference": "Patient/luna-ramirez",
+          "display": "Luna Ramirez"
+        },
+        "onsetDateTime": "2023-03-10",
+        "recorder": {
+          "reference": "Practitioner/practitioner-thomas-wright",
+          "display": "Dr. Thomas Wright"
+        },
+        "reaction": [
+          {
+            "substance": {
+              "coding": [
+                {
+                  "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                  "code": "7980",
+                  "display": "Penicillin"
+                }
+              ]
+            },
+            "manifestation": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "271807003",
+                    "display": "Eruption of skin"
+                  }
+                ],
+                "text": "Skin rash"
+              }
+            ],
+            "severity": "moderate",
+            "note": [
+              {
+                "text": "Developed generalized maculopapular rash within 2 hours of first dose of amoxicillin. Rash resolved within 48 hours after discontinuation."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medreq-sumatriptan",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "medreq-sumatriptan-er",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "313002",
+              "display": "Sumatriptan 50 MG Oral Tablet"
+            }
+          ],
+          "text": "Sumatriptan 50mg tablet"
+        },
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "authoredOn": "2016-08-10",
+        "requester": {
+          "reference": "Practitioner/practitioner-jennifer-liu",
+          "display": "Dr. Jennifer Liu"
+        },
+        "dosageInstruction": [
+          {
+            "sequence": 1,
+            "text": "Take 50mg by mouth at onset of migraine. May repeat once after 2 hours if needed. Maximum 200mg in 24 hours.",
+            "asNeededBoolean": true,
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                      "code": "ordered",
+                      "display": "Ordered"
+                    }
+                  ]
+                },
+                "doseQuantity": {
+                  "value": 50,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg"
+                }
+              }
+            ],
+            "maxDosePerPeriod": {
+              "numerator": {
+                "value": 200,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "unit": "day",
+                "system": "http://unitsofmeasure.org",
+                "code": "d"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medreq-montelukast-luna",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "medreq-montelukast-luna",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "582899",
+              "display": "Montelukast 5 MG Chewable Tablet"
+            }
+          ],
+          "text": "Montelukast 5mg chewable tablet"
+        },
+        "subject": {
+          "reference": "Patient/luna-ramirez",
+          "display": "Luna Ramirez"
+        },
+        "authoredOn": "2022-11-15",
+        "requester": {
+          "reference": "Practitioner/practitioner-thomas-wright",
+          "display": "Dr. Thomas Wright"
+        },
+        "dosageInstruction": [
+          {
+            "sequence": 1,
+            "text": "Chew one 5mg tablet by mouth once daily at bedtime",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                      "code": "ordered",
+                      "display": "Ordered"
+                    }
+                  ]
+                },
+                "doseQuantity": {
+                  "value": 5,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medreq-albuterol-luna",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "medreq-albuterol-luna",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "245314",
+              "display": "Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler"
+            }
+          ],
+          "text": "Albuterol inhaler PRN"
+        },
+        "subject": {
+          "reference": "Patient/luna-ramirez",
+          "display": "Luna Ramirez"
+        },
+        "authoredOn": "2022-11-15",
+        "requester": {
+          "reference": "Practitioner/practitioner-thomas-wright",
+          "display": "Dr. Thomas Wright"
+        },
+        "dosageInstruction": [
+          {
+            "sequence": 1,
+            "text": "Inhale 2 puffs every 4-6 hours as needed for wheezing or shortness of breath. Use spacer with mask.",
+            "asNeededBoolean": true,
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                      "code": "ordered",
+                      "display": "Ordered"
+                    }
+                  ]
+                },
+                "doseQuantity": {
+                  "value": 2,
+                  "unit": "puffs",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "{puffs}"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-wbc-1-er",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-wbc-1-er",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "WBC"
+        },
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "effectiveDateTime": "2025-06-10",
+        "performer": [
+          {
+            "reference": "Practitioner/practitioner-jennifer-liu",
+            "display": "Dr. Jennifer Liu"
+          }
+        ],
+        "valueQuantity": {
+          "value": 6.8,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4.5,
+              "unit": "10*3/uL",
+              "system": "http://unitsofmeasure.org",
+              "code": "10*3/uL"
+            },
+            "high": {
+              "value": 11.0,
+              "unit": "10*3/uL",
+              "system": "http://unitsofmeasure.org",
+              "code": "10*3/uL"
+            },
+            "text": "4.5 - 11.0 10*3/uL"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-hemoglobin-1-er",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-hemoglobin-1-er",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin [Mass/volume] in Blood"
+            }
+          ],
+          "text": "Hemoglobin"
+        },
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "effectiveDateTime": "2025-06-10",
+        "performer": [
+          {
+            "reference": "Practitioner/practitioner-jennifer-liu",
+            "display": "Dr. Jennifer Liu"
+          }
+        ],
+        "valueQuantity": {
+          "value": 13.2,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "g/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 12.0,
+              "unit": "g/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "g/dL"
+            },
+            "high": {
+              "value": 16.0,
+              "unit": "g/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "g/dL"
+            },
+            "text": "12.0 - 16.0 g/dL"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-hematocrit-1-er",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-hematocrit-1-er",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4544-3",
+              "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
+            }
+          ],
+          "text": "Hematocrit"
+        },
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "effectiveDateTime": "2025-06-10",
+        "performer": [
+          {
+            "reference": "Practitioner/practitioner-jennifer-liu",
+            "display": "Dr. Jennifer Liu"
+          }
+        ],
+        "valueQuantity": {
+          "value": 39.5,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 36,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "%"
+            },
+            "high": {
+              "value": 46,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "%"
+            },
+            "text": "36 - 46 %"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-platelets-1-er",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-platelets-1-er",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "777-3",
+              "display": "Platelets [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "Platelets"
+        },
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "effectiveDateTime": "2025-06-10",
+        "performer": [
+          {
+            "reference": "Practitioner/practitioner-jennifer-liu",
+            "display": "Dr. Jennifer Liu"
+          }
+        ],
+        "valueQuantity": {
+          "value": 265,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 150,
+              "unit": "10*3/uL",
+              "system": "http://unitsofmeasure.org",
+              "code": "10*3/uL"
+            },
+            "high": {
+              "value": 400,
+              "unit": "10*3/uL",
+              "system": "http://unitsofmeasure.org",
+              "code": "10*3/uL"
+            },
+            "text": "150 - 400 10*3/uL"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-sodium-1-er",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-sodium-1-er",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2951-2",
+              "display": "Sodium [Moles/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Sodium"
+        },
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "effectiveDateTime": "2025-06-10",
+        "performer": [
+          {
+            "reference": "Practitioner/practitioner-jennifer-liu",
+            "display": "Dr. Jennifer Liu"
+          }
+        ],
+        "valueQuantity": {
+          "value": 140,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "meq/L"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 136,
+              "unit": "mEq/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "meq/L"
+            },
+            "high": {
+              "value": 145,
+              "unit": "mEq/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "meq/L"
+            },
+            "text": "136 - 145 mEq/L"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-potassium-1-er",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-potassium-1-er",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Potassium"
+        },
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "effectiveDateTime": "2025-06-10",
+        "performer": [
+          {
+            "reference": "Practitioner/practitioner-jennifer-liu",
+            "display": "Dr. Jennifer Liu"
+          }
+        ],
+        "valueQuantity": {
+          "value": 4.0,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "meq/L"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 3.5,
+              "unit": "mEq/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "meq/L"
+            },
+            "high": {
+              "value": 5.0,
+              "unit": "mEq/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "meq/L"
+            },
+            "text": "3.5 - 5.0 mEq/L"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-creatinine-1-er",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-creatinine-1-er",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Creatinine"
+        },
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "effectiveDateTime": "2025-06-10",
+        "performer": [
+          {
+            "reference": "Practitioner/practitioner-jennifer-liu",
+            "display": "Dr. Jennifer Liu"
+          }
+        ],
+        "valueQuantity": {
+          "value": 0.8,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.6,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            },
+            "high": {
+              "value": 1.2,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            },
+            "text": "0.6 - 1.2 mg/dL"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-glucose-1-er",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-glucose-1-er",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2345-7",
+              "display": "Glucose [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Glucose"
+        },
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "effectiveDateTime": "2025-06-10",
+        "performer": [
+          {
+            "reference": "Practitioner/practitioner-jennifer-liu",
+            "display": "Dr. Jennifer Liu"
+          }
+        ],
+        "valueQuantity": {
+          "value": 88,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 70,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            },
+            "high": {
+              "value": 100,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            },
+            "text": "70 - 100 mg/dL"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-wbc-2-er",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-wbc-2-er",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "WBC"
+        },
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "effectiveDateTime": "2026-01-20",
+        "performer": [
+          {
+            "reference": "Practitioner/practitioner-jennifer-liu",
+            "display": "Dr. Jennifer Liu"
+          }
+        ],
+        "valueQuantity": {
+          "value": 7.1,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4.5,
+              "unit": "10*3/uL",
+              "system": "http://unitsofmeasure.org",
+              "code": "10*3/uL"
+            },
+            "high": {
+              "value": 11.0,
+              "unit": "10*3/uL",
+              "system": "http://unitsofmeasure.org",
+              "code": "10*3/uL"
+            },
+            "text": "4.5 - 11.0 10*3/uL"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-hemoglobin-2-er",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-hemoglobin-2-er",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin [Mass/volume] in Blood"
+            }
+          ],
+          "text": "Hemoglobin"
+        },
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "effectiveDateTime": "2026-01-20",
+        "performer": [
+          {
+            "reference": "Practitioner/practitioner-jennifer-liu",
+            "display": "Dr. Jennifer Liu"
+          }
+        ],
+        "valueQuantity": {
+          "value": 13.8,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "g/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 12.0,
+              "unit": "g/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "g/dL"
+            },
+            "high": {
+              "value": 16.0,
+              "unit": "g/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "g/dL"
+            },
+            "text": "12.0 - 16.0 g/dL"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-sodium-2-er",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-sodium-2-er",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2951-2",
+              "display": "Sodium [Moles/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Sodium"
+        },
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "effectiveDateTime": "2026-01-20",
+        "performer": [
+          {
+            "reference": "Practitioner/practitioner-jennifer-liu",
+            "display": "Dr. Jennifer Liu"
+          }
+        ],
+        "valueQuantity": {
+          "value": 141,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "meq/L"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 136,
+              "unit": "mEq/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "meq/L"
+            },
+            "high": {
+              "value": 145,
+              "unit": "mEq/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "meq/L"
+            },
+            "text": "136 - 145 mEq/L"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-potassium-2-er",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-potassium-2-er",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Potassium"
+        },
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "effectiveDateTime": "2026-01-20",
+        "performer": [
+          {
+            "reference": "Practitioner/practitioner-jennifer-liu",
+            "display": "Dr. Jennifer Liu"
+          }
+        ],
+        "valueQuantity": {
+          "value": 4.2,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "meq/L"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 3.5,
+              "unit": "mEq/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "meq/L"
+            },
+            "high": {
+              "value": 5.0,
+              "unit": "mEq/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "meq/L"
+            },
+            "text": "3.5 - 5.0 mEq/L"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-creatinine-2-er",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-creatinine-2-er",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Creatinine"
+        },
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "effectiveDateTime": "2026-01-20",
+        "performer": [
+          {
+            "reference": "Practitioner/practitioner-jennifer-liu",
+            "display": "Dr. Jennifer Liu"
+          }
+        ],
+        "valueQuantity": {
+          "value": 0.7,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.6,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            },
+            "high": {
+              "value": 1.2,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            },
+            "text": "0.6 - 1.2 mg/dL"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-glucose-2-er",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-glucose-2-er",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2345-7",
+              "display": "Glucose [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Glucose"
+        },
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "effectiveDateTime": "2026-01-20",
+        "performer": [
+          {
+            "reference": "Practitioner/practitioner-jennifer-liu",
+            "display": "Dr. Jennifer Liu"
+          }
+        ],
+        "valueQuantity": {
+          "value": 92,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 70,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            },
+            "high": {
+              "value": 100,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            },
+            "text": "70 - 100 mg/dL"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-emily-pcp-1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "encounter-emily-pcp-1",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up"
+              }
+            ],
+            "text": "Annual wellness visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/practitioner-jennifer-liu",
+              "display": "Dr. Jennifer Liu"
+            }
+          }
+        ],
+        "period": {
+          "start": "2025-06-10T09:00:00-06:00",
+          "end": "2025-06-10T09:25:00-06:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-great-falls-family",
+          "display": "Great Falls Family Practice"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-emily-pcp-2",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "encounter-emily-pcp-2",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up"
+              }
+            ],
+            "text": "Follow-up visit - migraine management"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/practitioner-jennifer-liu",
+              "display": "Dr. Jennifer Liu"
+            }
+          }
+        ],
+        "period": {
+          "start": "2026-01-20T10:00:00-07:00",
+          "end": "2026-01-20T10:20:00-07:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-great-falls-family",
+          "display": "Great Falls Family Practice"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-luna-peds-1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "encounter-luna-peds-1",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up"
+              }
+            ],
+            "text": "Well-child visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/luna-ramirez",
+          "display": "Luna Ramirez"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/practitioner-thomas-wright",
+              "display": "Dr. Thomas Wright"
+            }
+          }
+        ],
+        "period": {
+          "start": "2025-05-15T14:00:00-06:00",
+          "end": "2025-05-15T14:30:00-06:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-great-falls-pediatrics",
+          "display": "Great Falls Pediatric Associates"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-luna-peds-2",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "encounter-luna-peds-2",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up"
+              }
+            ],
+            "text": "Asthma follow-up"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/luna-ramirez",
+          "display": "Luna Ramirez"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/practitioner-thomas-wright",
+              "display": "Dr. Thomas Wright"
+            }
+          }
+        ],
+        "period": {
+          "start": "2025-11-18T10:00:00-07:00",
+          "end": "2025-11-18T10:25:00-07:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-great-falls-pediatrics",
+          "display": "Great Falls Pediatric Associates"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-luna-urgent-care",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "encounter-luna-urgent-care",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185345009",
+                "display": "Encounter for symptom"
+              }
+            ],
+            "text": "Urgent care - asthma exacerbation"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/luna-ramirez",
+          "display": "Luna Ramirez"
+        },
+        "period": {
+          "start": "2025-09-22T18:30:00-06:00",
+          "end": "2025-09-22T20:15:00-06:00"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "J45.21",
+                "display": "Mild intermittent asthma with (acute) exacerbation"
+              }
+            ],
+            "text": "Asthma exacerbation with wheezing, shortness of breath, and increased work of breathing"
+          }
+        ],
+        "serviceProvider": {
+          "reference": "Organization/org-benefis-urgent-care",
+          "display": "Benefis Health System Urgent Care"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:immunization-flu-emily",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "immunization-flu-emily",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "completed",
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "code": "197",
+              "display": "Influenza, high-dose, quadrivalent"
+            }
+          ],
+          "text": "Flu shot"
+        },
+        "patient": {
+          "reference": "Patient/emily-ramirez",
+          "display": "Emily Ramirez"
+        },
+        "occurrenceDateTime": "2025-10-08",
+        "performer": [
+          {
+            "actor": {
+              "reference": "Organization/org-great-falls-family",
+              "display": "Great Falls Family Practice"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:immunization-flu-luna",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "immunization-flu-luna",
+        "meta": {
+          "source": "Big Sky Care Connect"
+        },
+        "status": "completed",
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "code": "158",
+              "display": "Influenza, injectable, quadrivalent, preservative free"
+            }
+          ],
+          "text": "Flu shot (pediatric)"
+        },
+        "patient": {
+          "reference": "Patient/luna-ramirez",
+          "display": "Luna Ramirez"
+        },
+        "occurrenceDateTime": "2025-10-15",
+        "performer": [
+          {
+            "actor": {
+              "reference": "Organization/org-great-falls-pediatrics",
+              "display": "Great Falls Pediatric Associates"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

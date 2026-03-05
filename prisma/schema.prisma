@@ -1,0 +1,111 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id           String             @id @default(cuid())
+  email        String             @unique
+  name         String
+  dateOfBirth  DateTime
+  zipCode      String
+  verified     Boolean            @default(false)
+  createdAt    DateTime           @default(now())
+  updatedAt    DateTime           @updatedAt
+  records      CachedRecord[]
+  shares       ShareGrant[]
+  links        ProviderLink[]
+  aiQueries    AIQuery[]
+  patientCache PatientFhirCache[]
+  queryLogs    AIQueryLog[]
+}
+
+model CachedRecord {
+  id            String   @id @default(cuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id])
+  resourceType  String
+  fhirId        String
+  category      String
+  title         String
+  summary       String?
+  data          String
+  effectiveDate DateTime
+  source        String
+  facility      String?
+  provider      String?
+  status        String
+  numericValue  Float?
+  unit          String?
+  refRangeLow   Float?
+  refRangeHigh  Float?
+  cachedAt      DateTime @default(now())
+}
+
+model ShareGrant {
+  id             String    @id @default(cuid())
+  userId         String
+  user           User      @relation(fields: [userId], references: [id])
+  caregiverEmail String
+  caregiverName  String
+  permissions    String
+  accessLevel    String
+  grantedAt      DateTime  @default(now())
+  revokedAt      DateTime?
+  lastAccessed   DateTime?
+}
+
+model ProviderLink {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id])
+  token       String    @unique
+  scope       String
+  expiresAt   DateTime
+  createdAt   DateTime  @default(now())
+  accessedAt  DateTime?
+  revokedAt   DateTime?
+  accessCount Int       @default(0)
+  accessLog   String?
+}
+
+model AIQuery {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id])
+  question   String
+  answer     String
+  sourceData String
+  confidence String
+  createdAt  DateTime @default(now())
+}
+
+model PatientFhirCache {
+  id             String   @id @default(cuid())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id])
+  fhirPatientId  String
+  fhirBundle     String
+  resourceCount  Int
+  lastFetchedAt  DateTime @default(now())
+  lastModifiedAt DateTime
+  etag           String?
+  status         String
+}
+
+model AIQueryLog {
+  id           String   @id @default(cuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id])
+  queryText    String
+  queryHash    String
+  recordCount  Int
+  tokenCount   Int
+  responseTime Int
+  confidence   String
+  guardrailHit Boolean  @default(false)
+  createdAt    DateTime @default(now())
+}
