@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
 import { randomBytes } from "crypto";
 
 export async function POST(request: NextRequest) {
@@ -14,20 +13,12 @@ export async function POST(request: NextRequest) {
   const hours = durationHours || 24;
   const expiresAt = new Date(Date.now() + hours * 60 * 60 * 1000);
 
-  const link = await prisma.providerLink.create({
-    data: {
-      userId,
-      token,
-      scope: JSON.stringify(scope || { labs: true, medications: true, conditions: true, allergies: true }),
-      expiresAt,
-    },
-  });
-
+  // Return a simulated link (no database — demo mode)
   return NextResponse.json({
-    id: link.id,
-    token: link.token,
-    shareUrl: `/share/${link.token}`,
-    expiresAt: link.expiresAt.toISOString(),
+    id: `link-${Date.now()}`,
+    token,
+    shareUrl: `/share/${token}`,
+    expiresAt: expiresAt.toISOString(),
   });
 }
 
@@ -38,11 +29,6 @@ export async function DELETE(request: NextRequest) {
   if (!linkId) {
     return NextResponse.json({ error: "id is required" }, { status: 400 });
   }
-
-  await prisma.providerLink.update({
-    where: { id: linkId },
-    data: { revokedAt: new Date() },
-  });
 
   return NextResponse.json({ success: true });
 }

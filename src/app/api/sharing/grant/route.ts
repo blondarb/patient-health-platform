@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
 
 export async function POST(request: NextRequest) {
   const body = await request.json();
@@ -12,15 +11,16 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const grant = await prisma.shareGrant.create({
-    data: {
-      userId,
-      caregiverEmail,
-      caregiverName,
-      permissions: JSON.stringify(permissions || {}),
-      accessLevel: accessLevel || "view",
-    },
-  });
+  // Return a simulated grant (no database — demo mode)
+  const grant = {
+    id: `grant-${Date.now()}`,
+    userId,
+    caregiverEmail,
+    caregiverName,
+    permissions: JSON.stringify(permissions || {}),
+    accessLevel: accessLevel || "view",
+    createdAt: new Date().toISOString(),
+  };
 
   return NextResponse.json(grant);
 }
@@ -32,11 +32,6 @@ export async function DELETE(request: NextRequest) {
   if (!grantId) {
     return NextResponse.json({ error: "id is required" }, { status: 400 });
   }
-
-  await prisma.shareGrant.update({
-    where: { id: grantId },
-    data: { revokedAt: new Date() },
-  });
 
   return NextResponse.json({ success: true });
 }
