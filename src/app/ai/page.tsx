@@ -7,8 +7,7 @@ import { AIResponseCard } from "@/components/health/AIResponseCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Send, Brain, Loader2 } from "lucide-react";
-
-const DEMO_USER_ID = "demo-margaret";
+import { useDemoPatient } from "@/lib/demo-context";
 
 interface Message {
   id: string;
@@ -27,6 +26,7 @@ const defaultSuggestions = [
 ];
 
 function AIChat() {
+  const { patient } = useDemoPatient();
   const searchParams = useSearchParams();
   const initialQuery = searchParams.get("q") || "";
   const [messages, setMessages] = useState<Message[]>([]);
@@ -70,7 +70,7 @@ function AIChat() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          userId: DEMO_USER_ID,
+          userId: patient.id,
           question: text,
           conversationHistory,
         }),

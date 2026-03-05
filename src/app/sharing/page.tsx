@@ -16,8 +16,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Users, Link2, Plus, UserPlus, Clock } from "lucide-react";
-
-const DEMO_USER_ID = "demo-margaret";
+import { useDemoPatient } from "@/lib/demo-context";
 
 interface CaregiverGrant {
   id: string;
@@ -38,6 +37,7 @@ interface ProviderLinkData {
 }
 
 export default function SharingPage() {
+  const { patient } = useDemoPatient();
   const [caregivers, setCaregivers] = useState<CaregiverGrant[]>([]);
   const [links, setLinks] = useState<ProviderLinkData[]>([]);
   const [showAddCaregiver, setShowAddCaregiver] = useState(false);
@@ -68,7 +68,7 @@ export default function SharingPage() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        userId: DEMO_USER_ID,
+        userId: patient.id,
         caregiverName: newCaregiver.name,
         caregiverEmail: newCaregiver.email,
         permissions: newPermissions,
@@ -94,7 +94,7 @@ export default function SharingPage() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        userId: DEMO_USER_ID,
+        userId: patient.id,
         scope: linkScope,
         durationHours: linkDuration,
       }),

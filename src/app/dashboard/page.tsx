@@ -20,8 +20,7 @@ import {
 import { DisplayRecord, RecordCategory, RecordStatus } from "@/lib/fhir/types";
 import { evaluateAlerts, HealthAlert } from "@/lib/alerts/thresholds";
 import { useRouter } from "next/navigation";
-
-const DEMO_USER_ID = "demo-margaret";
+import { useDemoPatient } from "@/lib/demo-context";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
@@ -33,12 +32,13 @@ const suggestedQuestions = [
 
 export default function DashboardPage() {
   const router = useRouter();
+  const { patient } = useDemoPatient();
   const [filter, setFilter] = useState<RecordCategory | null>(null);
   const [refreshing, setRefreshing] = useState(false);
   const [aiQuery, setAiQuery] = useState("");
 
   const { data, isLoading, mutate } = useSWR(
-    `/api/records?userId=${DEMO_USER_ID}&limit=100`,
+    `/api/records?userId=${patient.id}&limit=100`,
     fetcher
   );
 
@@ -92,7 +92,7 @@ export default function DashboardPage() {
       <div className="flex items-center justify-between mb-6">
         <div>
           <h1 className="text-2xl font-bold text-brand-navy">
-            {greeting()}, Margaret
+            {greeting()}, {patient.shortName}
           </h1>
           <p className="text-sm text-text-muted mt-0.5">
             Last updated: just now •{" "}

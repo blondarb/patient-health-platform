@@ -13,8 +13,10 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { User, Bell, Eye, MessageSquare, Shield } from "lucide-react";
+import { useDemoPatient } from "@/lib/demo-context";
 
 export default function SettingsPage() {
+  const { patient } = useDemoPatient();
   const [notifications, setNotifications] = useState({
     criticalAlerts: true,
     newResults: true,
@@ -38,15 +40,15 @@ export default function SettingsPage() {
           <div className="space-y-2">
             <div className="flex justify-between">
               <span className="text-sm text-text-secondary">Name</span>
-              <span className="text-sm font-medium">Margaret Thompson</span>
+              <span className="text-sm font-medium">{patient.name}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-sm text-text-secondary">Date of Birth</span>
-              <span className="text-sm font-medium">September 14, 1958</span>
+              <span className="text-sm font-medium">{patient.dateOfBirth}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-sm text-text-secondary">ZIP Code</span>
-              <span className="text-sm font-medium">59301</span>
+              <span className="text-sm font-medium">{patient.zipCode}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-sm text-text-secondary">Data Source</span>

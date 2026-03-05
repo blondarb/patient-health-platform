@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { DemoProvider } from "@/lib/demo-context";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <TooltipProvider>{children}</TooltipProvider>
+        <DemoProvider>
+          <TooltipProvider>{children}</TooltipProvider>
+        </DemoProvider>
       </body>
     </html>
   );

@@ -8,8 +8,8 @@ import { CategoryChip } from "@/components/health/CategoryChip";
 import { Input } from "@/components/ui/input";
 import { Search, Loader2 } from "lucide-react";
 import { DisplayRecord, RecordCategory } from "@/lib/fhir/types";
+import { useDemoPatient } from "@/lib/demo-context";
 
-const DEMO_USER_ID = "demo-margaret";
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
 const categories: RecordCategory[] = [
@@ -23,11 +23,12 @@ const categories: RecordCategory[] = [
 ];
 
 export default function RecordsPage() {
+  const { patient } = useDemoPatient();
   const [filter, setFilter] = useState<RecordCategory | null>(null);
   const [search, setSearch] = useState("");
 
   const { data, isLoading } = useSWR(
-    `/api/records?userId=${DEMO_USER_ID}&limit=200`,
+    `/api/records?userId=${patient.id}&limit=200`,
     fetcher
   );
 
