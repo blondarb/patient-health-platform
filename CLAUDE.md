@@ -25,3 +25,10 @@ Patient health prototype with AI-powered clinical insights via AWS Bedrock. Feat
 
 ### Known Issues
 - None
+
+## Documentation Files
+
+Update these when committing changes (per global Commit Workflow rules):
+
+- `CLAUDE.md` — update if architecture, config, or status changed
+- `docs/HANDOFF_YYYY-MM-DD.md` — create/update with session summary and next steps
