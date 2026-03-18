@@ -1,9 +1,14 @@
-import Anthropic from "@anthropic-ai/sdk";
+import {
+  BedrockRuntimeClient,
+  InvokeModelCommand,
+} from "@aws-sdk/client-bedrock-runtime";
 import { buildSystemPrompt } from "./system-prompt";
 
-const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY || "",
+const bedrock = new BedrockRuntimeClient({
+  region: process.env.AWS_REGION || "us-east-2",
 });
+
+const MODEL_ID = "us.anthropic.claude-sonnet-4-20250514-v1:0";
 
 export interface AIResponse {
   answer: string;
@@ -18,20 +23,34 @@ export async function queryAI(
 ): Promise<AIResponse> {
   const systemPrompt = buildSystemPrompt(patientRecordsJson);
 
-  const messages: Array<{ role: "user" | "assistant"; content: string }> = [
+  const messages = [
     ...conversationHistory,
-    { role: "user", content: question },
+    { role: "user" as const, content: question },
   ];
 
-  const response = await anthropic.messages.create({
-    model: "claude-sonnet-4-20250514",
+  // Bedrock Anthropic models accept the Claude messages API body format directly.
+  // The body is identical to the Anthropic API — system, messages, max_tokens, anthropic_version.
+  const body = JSON.stringify({
+    anthropic_version: "bedrock-2023-05-31",
     max_tokens: 1024,
     system: systemPrompt,
     messages,
   });
 
+  const command = new InvokeModelCommand({
+    modelId: MODEL_ID,
+    contentType: "application/json",
+    accept: "application/json",
+    body: new TextEncoder().encode(body),
+  });
+
+  const response = await bedrock.send(command);
+  const responseBody = JSON.parse(new TextDecoder().decode(response.body));
+
   const answerText =
-    response.content[0].type === "text" ? response.content[0].text : "";
+    responseBody.content?.[0]?.type === "text"
+      ? responseBody.content[0].text
+      : "";
 
   // Determine confidence based on content
   const confidence = determineConfidence(answerText, patientRecordsJson);
