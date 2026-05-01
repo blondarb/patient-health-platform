@@ -37,6 +37,7 @@ data ships with the bundle.
 **Status**: Legacy
 
 ### Recent
+- **CLAUDE.md improvements (PR #2, May 1)** — Applied claude-md-improver bottom-5 recommendations; documentation structure, known issues, and workflow guidance updated.
 - Migrated AI client from OpenAI to AWS Bedrock
 - Replaced database with static JSON for simpler deployment
 - Added demo mode with 3 patient scenarios on welcome page
